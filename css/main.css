@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.foto_pana {
+    display: flex;        /* zet afbeeldingen naast elkaar */
+    padding: 0;
+    margin: 0;
+}
+
+.foto_pana img {
+    width: 25%;           /* pas later aan zodra je 31 images hebt */
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;       /* verwijdert witruimte onder afbeelding */
+}
