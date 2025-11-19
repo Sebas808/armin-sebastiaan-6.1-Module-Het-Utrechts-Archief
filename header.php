@@ -1,44 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Utrecht Archief — Tijdpanorama</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/sebas.css">
+  <style>
+ 
+  </style>
 </head>
+
 <body>
-    <header class="ua-header" role="banner" aria-label="Hoofdnavigatie Het Utrechts Archief">
-  <a class="ua-skip" href="#main">Spring naar hoofdcontent</a>
+<header>
+  <div class="header-inner">
+    <a class="header-brand" href="#">
+      <h1>Utrecht Archief — Tijdpanorama</h1>
+    </a>
 
-  <div class="ua-top">
-    <div class="ua-brand">
-      <a href="/" class="ua-logo-link" aria-label="Naar de startpagina">
-        <img src="/images/logo-ua-placeholder.svg" alt="Logo Het Utrechts Archief" class="ua-logo">
-      </a>
-      <div class="ua-title">
-        <h1>Het Utrechts Archief</h1>
-        <p class="ua-tag">Verhalen uit de stad en provincie</p>
-      </div>
-    </div>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="#">Panorama</a></li>
+        <li><a href="#">Tijdvakken</a></li>
+        <li><a href="#">login</a></li>
+        <li><a href="#">Over het project</a></li>
+      </ul>
+    </nav>
 
-    <form class="ua-search" action="/zoeken.php" method="get" role="search" aria-label="Zoek in archief">
-      <label for="q" class="visually-hidden">Zoeken</label>
-      <input id="q" name="q" type="search" placeholder="Zoeken in het archief…" aria-label="Zoekterm">
-      <button type="submit" aria-label="Start zoekopdracht">Zoeken</button>
-    </form>
-
-    <button class="ua-menu-toggle" aria-expanded="false" aria-controls="ua-nav">Menu</button>
+    <button class="header-btn-panorama">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4v16h16"/><path d="M4 12h8"/><path d="M12 4v8"/></svg>
+      Start panorama
+    </button>
   </div>
 
-  <nav id="ua-nav" class="ua-nav" role="navigation" aria-label="Hoofdnavigatie">
-    <ul>
-      <li><a href="/" <?php if(basename($_SERVER['PHP_SELF'])=='index.php') echo 'aria-current="page"'; ?>>Home</a></li>
-      <li><a href="/collecties.php">Collecties</a></li>
-      <li><a href="/onderzoek.php">Onderzoek</a></li>
-      <li><a href="/tentoonstellingen.php">Tentoonstellingen</a></li>
-      <li><a href="/over-ons.php">Over ons</a></li>
-      <li><a href="/bezoeken.php">Bezoeken</a></li>
-    </ul>
-  </nav>
+  <div class="header-subband">
+    <div class="header-subband-inner">
+      <svg class="header-dom" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="none" stroke="var(--primary)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M100 10 L100 120"/>
+          <path d="M80 40 L120 40"/>
+          <path d="M85 40 L90 20 L110 20 L115 40"/>
+          <path d="M70 80 L130 80"/>
+        </g>
+      </svg>
+      <div>
+        <h2>Reis door Utrecht door alle tijden heen</h2>
+        <p>Scroll langs een panoramische tijdlijn — van middeleeuwse stadspoorten tot armoede tijden</p>
+      </div>
+    </div>
+  </div>
 </header>
+
+<main style="padding:40px;max-width:var(--max);margin:0 auto">
+</main>
 </body>
 </html>

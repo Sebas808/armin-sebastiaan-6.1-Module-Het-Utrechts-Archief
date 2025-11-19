@@ -1,0 +1,124 @@
+   :root{
+      --primary:#0b4d6a;
+      --accent:#c6492b;
+      --muted:#f3efe7;
+      --ink:#222;
+      --shadow:0 6px 18px rgba(11,77,106,0.12);
+      --max:1300px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter, sans-serif;
+      background:var(--muted);
+    }
+
+    /* Panorama‑thema header */
+    header{
+      background:rgba(255,255,255,0.75);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid rgba(0,0,0,0.05);
+      box-shadow:var(--shadow);
+      position:sticky;top:0;z-index:50;
+    }
+
+    .header-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    /* logo + titel */
+    .header-brand{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      text-decoration:none;
+      color:var(--primary);
+    }
+
+    .header-logo{
+      width:60px;height:60px;
+      background:linear-gradient(135deg,var(--primary),#1381a0);
+      border-radius:14px;
+      display:grid;place-items:center;
+      box-shadow:0 4px 14px rgba(0,0,0,0.15);
+    }
+
+    .header-brand h1{
+      font-family:Merriweather, serif;
+      font-size:22px;
+    }
+
+    /* Navigatie speciaal gericht op interactief panorama */
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:22px;
+    }
+    .header-nav a{
+      text-decoration:none;
+      color:var(--ink);
+      font-weight:600;
+      padding:6px 4px;
+    }
+    nav a:hover{color:var(--primary)}
+
+    /* Speciale tijdlijnknop */
+    .header-btn-panorama{
+      background:var(--primary);
+      color:white;
+      padding:10px 18px;
+      border-radius:10px;
+      border:0;
+      cursor:pointer;
+      font-weight:600;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .header-btn-panorama:hover{background:#0d5f86}
+
+    /* Onderstrook: subtiel tijdbeeld */
+    .header-subband{
+      background:linear-gradient(90deg, rgba(11,77,106,0.12), rgba(198,73,43,0.12));
+      border-top:1px dashed rgba(0,0,0,0.05);
+    }
+
+    .header-subband-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 24px;
+      display:flex;
+      align-items:center;
+      gap:20px;
+    }
+
+    .header-subband h2{
+      font-family:Merriweather, serif;
+      font-size:18px;
+      color:var(--primary);
+    }
+
+    .header-subband p{
+      font-size:14px;
+      color:rgba(0,0,0,0.65);
+    }
+
+    /* Silhouet */
+    .header-dom{
+      width:110px;opacity:0.7;
+    }
+
+    @media(max-width:800px){
+      nav{display:none}
+      .header-brand h1{font-size:18px}
+      .header-subband-inner{flex-direction:column;text-align:center}
+      .header-dom{width:80px}
+    }
