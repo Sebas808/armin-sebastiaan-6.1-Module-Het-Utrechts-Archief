@@ -26,7 +26,7 @@
       <ul>
         <li><a href="#">Panorama</a></li>
         <li><a href="startpage.php">uitleg</a></li>
-        <li><a href="#">login</a></li>
+        <li><a href="login.php">login</a></li>
         <li><a href="#">Over het project</a></li>
       </ul>
     </nav>
