@@ -13,6 +13,8 @@
     <img src="img/utrecht3.jpg" alt="Utrechtse Archief">
     <img src="img/utrecht4.jpg" alt="Utrechtse Archief">
     <img src="img/utrecht5.jpg" alt="Utrechtse Archief">
+    <img src="img/utrecht6.jpg" alt="Utrechtse Archief">
+    <img src="img/utrecht7.jpg" alt="Utrechtse Archief">
 </div>
 
     

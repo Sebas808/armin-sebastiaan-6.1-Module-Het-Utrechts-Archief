@@ -4,15 +4,20 @@ body {
 }
 
 .foto_pana {
-    display: flex;        /* zet afbeeldingen naast elkaar */
-    padding: 0;
-    margin: 0;
+    display: flex;
+    overflow-x: auto;          /* horizontaal scrollen */
+    overflow-y: hidden;
+    width: 100vw;
+    scroll-snap-type: x mandatory;
 }
 
 .foto_pana img {
-    width: 25%;           /* pas later aan zodra je 31 images hebt */
-    height: auto;
+    width: calc(100vw / 3);    /* precies 3 foto's in beeld */
+    height: auto;              /* behoudt jouw originele schaal */
+    flex-shrink: 0;            /* voorkom dat ze kleiner worden */
+    scroll-snap-align: start;
+    display: block;
     margin: 0;
     padding: 0;
-    display: block;       /* verwijdert witruimte onder afbeelding */
+    object-fit: cover;         /* foto vult ruimte zonder witte randen */
 }
