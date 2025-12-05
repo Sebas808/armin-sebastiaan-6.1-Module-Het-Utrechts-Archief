@@ -95,7 +95,7 @@
 
       <div style="background:white; padding:1rem; border-radius:10px; width:30%; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
         <img src="img/info.png" style="width:80px; height:80px; background:#ddd; border-radius:6px;" />
-        <h3 data-nl="Druk op de I voor informatie" data-en="Press the I for information">Druk op de I voor informatie</h3>
+        <h3 data-nl="Druk op de puntjes voor informatie" data-en="Press the I for information">Druk op de puntjes voor informatie</h3>
       </div>
 
       <div style="background:white; padding:1rem; border-radius:10px; width:30%; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.1);">

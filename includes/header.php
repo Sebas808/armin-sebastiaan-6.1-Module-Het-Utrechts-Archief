@@ -18,10 +18,15 @@
       </ul>
     </nav>
 
-    <button class="header-btn-panorama">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4v16h16"/><path d="M4 12h8"/><path d="M12 4v8"/></svg>
-      <span data-i18n="btn_start">Start panorama</span>
-    </button>
+    <div class="header-icon" title="Panorama Icon">
+  <svg width="80" height="40" viewBox="0 0 24 24" role="img" aria-hidden="false" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="80" height="80" rx="3" ry="3" fill="#2a8b79"/>
+    <g transform="translate(2 2)" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="8" cy="8" r="5.2" />
+      <line x1="12.2" y1="12.2" x2="16" y2="16" />
+    </g>
+  </svg>
+    </div>
   </div>
 </header>
 <script>
