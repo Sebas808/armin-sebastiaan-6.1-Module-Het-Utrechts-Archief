@@ -11,7 +11,7 @@
 
     <nav class="header-nav">
       <ul>
-        <li><a data-i18n="nav_panorama" href="#">Panorama</a></li>
+        <li><a data-i18n="nav_panorama" href="#" class="scroll-300">Panorama</a></li>
         <li><a data-i18n="nav_uitleg" href="index.php">uitleg</a></li>
         <li><a data-i18n="nav_login" href="login.php">login</a></li>
         <li><a data-i18n="nav_over" href="#">Over het project</a></li>
@@ -37,7 +37,11 @@ const translations = {
     nav_uitleg: "uitleg",
     nav_login: "login",
     nav_over: "Over het project",
-    btn_start: "Start panorama"
+    btn_start: "Start panorama",
+    welcome_title: "Welkom bij Het Utrechts Archief",
+    welcome_intro: "Ontdek de verhalen, details en verborgen parels van het historische Utrecht. Onze digitale panorama neemt je mee terug in de tijd en laat je de stad ervaren zoals zij er ooit uitzag.",
+    welcome_highlight: "Verken iconische locaties, zoom in op bijzondere elementen en laat je inspireren door het rijke erfgoed dat Utrecht al eeuwenlang vormt.",
+    welcome_subtext: "Scroll naar beneden om de volledige panorama te bekijken en jouw reis door het oude Utrecht te beginnen."
   },
 
   en: {
@@ -46,7 +50,11 @@ const translations = {
     nav_uitleg: "Instructions",
     nav_login: "Login",
     nav_over: "About the project",
-    btn_start: "Start panorama"
+    btn_start: "Start panorama",
+      welcome_title: "Welcome to the Utrecht Archives",
+    welcome_intro: "Discover the stories, details, and hidden gems of historic Utrecht. Our digital panorama takes you back in time and lets you experience the city as it once was.",
+    welcome_highlight: "Explore iconic locations, zoom in on unique details, and get inspired by the rich heritage that has shaped Utrecht for centuries.",
+    welcome_subtext: "Scroll down to view the full panorama and begin your journey through historic Utrecht."
   }
 };
 
@@ -67,4 +75,15 @@ document.getElementById("langSelect").addEventListener("change", e => {
 const storedLang = localStorage.getItem("lang") || "nl";
 document.getElementById("langSelect").value = storedLang;
 setLanguage(storedLang);
+</script>
+<script>
+  document.querySelectorAll(".scroll-300").forEach(function(link) {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      window.scrollBy({
+        top: 400,
+        behavior: "smooth"
+      });
+    });
+  });
 </script>

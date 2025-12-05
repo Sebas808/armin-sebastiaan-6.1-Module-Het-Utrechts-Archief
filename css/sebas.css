@@ -129,3 +129,57 @@ height: 1400px;
 
 
 }
+
+.home-welcome {
+width: 100%;
+padding: 60px 20px;
+border-bottom: 1px solid #e1e1e1;
+}
+
+
+.home-welcome-container {
+max-width: 950px;
+margin: 0 auto;
+text-align: center;
+}
+
+
+.home-welcome-title {
+font-size: 2.6rem;
+font-weight: 600;
+color: #2b2b2b;
+margin-bottom: 25px;
+}
+
+
+.home-welcome-intro {
+font-size: 1.2rem;
+color: #4a4a4a;
+line-height: 1.8;
+margin-bottom: 30px;
+}
+
+
+.home-welcome-highlight {
+
+border: 1px solid #e7e7e7;
+padding: 25px 20px;
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+margin-bottom: 30px;
+}
+
+
+.home-welcome-highlight p {
+font-size: 1.15rem;
+color: #3a3a3a;
+line-height: 1.7;
+margin: 0;
+}
+
+
+.home-welcome-subtext {
+font-size: 1.05rem;
+color: #5a5a5a;
+margin-top: 10px;
+}
