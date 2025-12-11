@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$user = "root"; // standaard voor XAMPP
-$pass = ""; // standaard leeg
-$dbname = "login_db"; // naam van je database
+$user = "root"; 
+$pass = "";
+$dbname = "login_db";
 
 
 try {
@@ -30,16 +30,72 @@ $message = "Onjuiste gebruikersnaam of wachtwoord.";
 }
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head><title>Login</title></head>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<style>
+body {
+margin: 0;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: url('img/stad.png') no-repeat center center/cover;
+backdrop-filter: blur(6px);
+}
+.overlay {
+position: absolute;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.45);
+backdrop-filter: blur(4px);
+}
+.login-box {
+position: relative;
+z-index: 10;
+background: rgba(255,255,255,0.15);
+padding: 30px 40px;
+border-radius: 12px;
+backdrop-filter: blur(10px);
+color: white;
+box-shadow: 0 0 20px rgba(0,0,0,0.4);
+text-align: center;
+width: 320px;
+}
+input {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border: none;
+border-radius: 6px;
+}
+button {
+width: 100%;
+padding: 10px;
+border: none;
+background: #2196F3;
+color: white;
+font-size: 16px;
+border-radius: 6px;
+cursor: pointer;
+}
+button:hover {
+background: #0b7dda;
+}
+h2 { margin-bottom: 10px; }
+</style>
+</head>
 <body>
+<div class="overlay"></div>
+<div class="login-box">
 <h2>Login</h2>
 <p><?php echo $message; ?></p>
 <form method="post">
-Gebruikersnaam: <input type="text" name="username" required><br><br>
-Wachtwoord: <input type="password" name="password" required><br><br>
+<input type="text" name="username" placeholder="Gebruikersnaam" required>
+<input type="password" name="password" placeholder="Wachtwoord" required>
 <button type="submit">Inloggen</button>
 </form>
+</div>
 </body>
 </html>
