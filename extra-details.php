@@ -37,7 +37,6 @@
       margin-bottom: 2rem;
     }
 
-    /* Zoom test area */
     .zoom-box {
       width: 100%;
       height: 300px;
@@ -53,7 +52,6 @@
       overflow: hidden;
     }
 
-    /* Info test */
     .info-button {
       width: 50px;
       height: 50px;
@@ -117,7 +115,6 @@
 </div>
 
 <script>
-  // Language switcher (works by toggling elements that have data-nl/data-en)
   const langSelect = document.getElementById('langSelect');
   function applyLanguage(lang) {
     document.querySelectorAll('[data-nl]').forEach(el => {
@@ -125,21 +122,17 @@
       if (text !== null) el.innerText = text;
     });
   }
-  // initialize to Dutch
   applyLanguage('nl');
   langSelect.addEventListener('change', () => applyLanguage(langSelect.value));
-
-  // Zoom test - lens-style zoom centered on mouse position
   const zoomBox = document.getElementById('zoomBox');
   let isZoomed = false;
-  const ZOOM_SIZE = 180; // percent
+  const ZOOM_SIZE = 180; 
 
   function setZoomAt(clientX, clientY) {
     const rect = zoomBox.getBoundingClientRect();
     const x = ((clientX - rect.left) / rect.width) * 100;
     const y = ((clientY - rect.top) / rect.height) * 100;
     zoomBox.style.backgroundSize = ZOOM_SIZE + '%';
-    // clamp positions between 0 and 100
     const clamp = v => Math.max(0, Math.min(100, v));
     zoomBox.style.backgroundPosition = `${clamp(x)}% ${clamp(y)}%`;
   }
@@ -157,17 +150,13 @@
   zoomBox.addEventListener('mouseleave', () => {
     resetZoom();
   });
-
-  // keyboard accessibility to move zoom with arrow keys when focused
   zoomBox.tabIndex = 0;
   zoomBox.addEventListener('keydown', (e) => {
     if (!isZoomed && ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)) {
-      // start zoom centered
       zoomBox.style.backgroundSize = ZOOM_SIZE + '%';
       isZoomed = true;
     }
     const rect = zoomBox.getBoundingClientRect();
-    // get current background position
     const pos = zoomBox.style.backgroundPosition || '50% 50%';
     let [curX, curY] = pos.split(' ').map(s => parseFloat(s));
     const step = 3; // percent
@@ -182,7 +171,6 @@
 
   document.getElementById('resetZoom').addEventListener('click', resetZoom);
 
-  // Info test
   const infoBtn = document.getElementById('infoBtn');
   const infoBox = document.getElementById('infoBox');
 
